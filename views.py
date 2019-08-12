@@ -1,7 +1,7 @@
 from app import *
 from models import Users, Ppa
 from flask import session, render_template, request, redirect
-from forms import LoginForm, Upload, Search
+from forms import LoginForm, UploadForm, SearchForm, RegisterForm
 
 
 @app.route('/')
@@ -21,7 +21,7 @@ def login():
 		if user and user.password==form.password.data:	
 			session['logged_in'] = True
 			session['username'] = form.username.data
-			return render_template('home.html',error = None)
+			return render_template('home.html')
 		elif user:
 			return render_template('login.html',error = "Wrong Password",form=form)
 		else:
@@ -30,10 +30,28 @@ def login():
 	return render_template('login.html',error=None,form=form)
 
 
-@app.route('/upload',methods = ['POST','GET'])
+@app.route('/register', methods = ['POST','GET'])
+def register():
+	error = None 
+	form = RegisterForm()
+	if form.validate_on_submit():
+		status = Users.query.filter_by(user_name=form.username.data).first()
+		if not status:
+			print('done')
+			new_user = Users(user_name=form.username.data, password=form.password.data) 
+			db.session.add(new_user)
+			db.session.commit()
+			session['logged_in'] = True
+			session['username'] = form.username.data
+			return render_template('home.html')		
+			
+		error = 'User name already existed'
+	return render_template('register.html', error=error, form=form)
+
+@app.route('/upload', methods = ['POST','GET'])
 def upload():
 	info = []		
-	form = Upload()
+	form = UploadForm()
 	if form.validate_on_submit():
 		info.append(form.product.data)
 		info.append(form.price.data)
@@ -48,7 +66,7 @@ def upload():
 @app.route('/search',methods = ['POST','GET'])
 def search():
 	info = []
-	form = Search()
+	form = SearchForm()
 	if form.validate_on_submit():
 		search = "%{}%".format(form.product.data)
 		res = Ppa.query.filter(Ppa.product.like(search)).all()

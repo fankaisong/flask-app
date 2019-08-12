@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
   
 
 app = Flask(__name__)
-app.config.from_pyfile('config.py')
+app.config.from_object('config')
 db = SQLAlchemy(app)
 
 
@@ -13,6 +13,6 @@ db = SQLAlchemy(app)
 from views import * 
 
 if __name__ == '__main__':
-	app.run(host='0.0.0.0', port=80, debug=True)
+	app.run(host='0.0.0.0', debug=True)
 
 
