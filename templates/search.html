@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<!-- Page Content -->
+  <div class="col-lg-12 text-center" >
+
+    <div class="wrap-upload100">
+
+    <form class="login100-form" action='/search' method="post">
+      <span class="login100-form-title">Enter the product's name</span>
+
+      <div class="wrap-input100">
+          <!-- <input class="input100" type="text" placeholder="Product Name" name="product" required> -->
+          {{ form.csrf_token }}
+          {{form.product(class='input100')}}
+        </div>
+
+        <div class="wrap-input100">
+          <input class="login100-form-btn" type="submit"  value="Search">
+        </div>
+
+    </form>
+  </div>
+
+    <div class="display-result">
+      {% if info %}
+      <ul style="list-style-type: none">Your search result:
+        {%for each in info%}
+        <li>{{each['price_type']}}: {{each['price']}} at {{each['address']}}</li>
+        {%endfor%} 
+      </ul>
+
+      {% endif %}  
+    </div>
+  </div>  
+
+
+{% endblock content %}
