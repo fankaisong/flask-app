@@ -72,7 +72,7 @@ def search():
 		res = Ppa.query.filter(Ppa.product.like(search)).all()
 		if res:
 			for r in res:
-				info.append({'price_type':r.price_type,'price':r.price,'address':r.address})
+				info.append({'product':r.product, 'price_type':r.price_type,'price':r.price,'address':r.address})
 		
 	return render_template('search.html', info = info, form=form)
 

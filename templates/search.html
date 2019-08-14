@@ -3,7 +3,7 @@
 {% block content %}
 
 <!-- Page Content -->
-  <div class="col-lg-12 text-center" >
+  <div class="wrap-upload100" >
 
     <div class="wrap-upload100">
 
@@ -23,13 +23,28 @@
     </form>
   </div>
 
-    <div class="display-result">
+    <div class="wrap-upload100">
       {% if info %}
-      <ul style="list-style-type: none">Your search result:
-        {%for each in info%}
-        <li>{{each['price_type']}}: {{each['price']}} at {{each['address']}}</li>
-        {%endfor%} 
-      </ul>
+      <table class="table table-dark table-display">
+      <thead>
+        <tr>
+          <th scope="col">Item</th>
+          <th scope="col">Price Type</th>
+          <th scope="col">Price</th>
+          <th scope="col">Location</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for each in info %}
+        <tr>
+          <td >{{each['product']}}</td>
+          <td >{{each['price_type']}}</td>
+          <td >{{each['price']}}</td>
+          <td >{{each['address']}}</td>
+        </tr>
+        {%endfor%}
+      </tbody>
+    </table>
 
       {% endif %}  
     </div>
