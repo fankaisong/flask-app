@@ -52,29 +52,6 @@ textarea {
   border: none;
 }
 
-textarea:focus, input:focus {
-  border-color: transparent !important;
-}
-
-input:focus::-webkit-input-placeholder { color:transparent; }
-input:focus:-moz-placeholder { color:transparent; }
-input:focus::-moz-placeholder { color:transparent; }
-input:focus:-ms-input-placeholder { color:transparent; }
-
-textarea:focus::-webkit-input-placeholder { color:transparent; }
-textarea:focus:-moz-placeholder { color:transparent; }
-textarea:focus::-moz-placeholder { color:transparent; }
-textarea:focus:-ms-input-placeholder { color:transparent; }
-
-input::-webkit-input-placeholder { color: #999999; }
-input:-moz-placeholder { color: #999999; }
-input::-moz-placeholder { color: #999999; }
-input:-ms-input-placeholder { color: #999999; }
-
-textarea::-webkit-input-placeholder { color: #999999; }
-textarea:-moz-placeholder { color: #999999; }
-textarea::-moz-placeholder { color: #999999; }
-textarea:-ms-input-placeholder { color: #999999; }
 
 /*---------------------------------------------*/
 button {
@@ -111,6 +88,7 @@ iframe {
 /*//////layout //////////////////////////////////////////layout CSS*/
 .layout-navbar{
   width: 100%;
+  display: inline-block;
   height: 55px;
   background-color: #343a40;
   margin-left: auto;
@@ -141,7 +119,6 @@ iframe {
 
 .layout-menu{
   float: right;
-  justify-content: space-between;
   width: 50%;
   padding-right: 20%;
   padding-left: 15px;
@@ -170,7 +147,7 @@ iframe {
   margin-left: 10px;
 
 }
-  .wrap-table100 {
+.wrap-table100 {
   width: 60%;
   display: inline-block;
   background: #fff;
@@ -190,29 +167,6 @@ iframe {
 /*//////////////////////////////////////////////////////////////////
 [ login ]*/
 
-.limiter {
-  width: 100%;
-  margin: 0 auto;
-}
-
-.container-login100 {
-  width: 100%;  
-  min-height: 100vh;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 15px;
-  background: #9053c7;
-  background: -webkit-linear-gradient(-135deg, #c850c0, #4158d0);
-  background: -o-linear-gradient(-135deg, #c850c0, #4158d0);
-  background: -moz-linear-gradient(-135deg, #c850c0, #4158d0);
-  background: linear-gradient(-135deg, #c850c0, #4158d0);
-}
 
 .wrap-login100 {
   width: 100%;
@@ -229,22 +183,11 @@ iframe {
 /*/*home page css*--------------------------------*/
 .wrap-upload100 {
   width: 40%;
-  display: inline-block;
   background: #fff;
-  flex-wrap: wrap;
-  justify-content: space-between;
   padding: 60px 40px 30px 40px;
+  margin-left: auto;
+  margin-right: auto
 }
-
-.display-result {
-    padding: 0px 50px 15px 50px;
-    width: 40%;
-    display: inline-block;
-    margin-left: 200px;
-    margin-right: 200px;
-  }
-
-
 
 
 
@@ -478,9 +421,11 @@ iframe {
 }
 
 .layout-menu{
-  width: 58%;
-  padding: 28px 3px 8px 3px;
-  margin: 0;
+  width: 53%;
+  float: right;
+  padding: 28px 3px 8px 0px;
+  margin-right: 20px;
+  margin-left: 0px;
   height:90%;
 }
 
@@ -515,19 +460,22 @@ iframe {
 }
   .wrap-table100 {
   width: 100%;
-  display: inline-block;
   background: #fff;
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 6px 4px 3px 4px;
 }
 
-.table-display, td{
+.table-display{
+  width:50%;
   font-size: 0.8rem;
   margin-right: 0px;
   margin-left: 0px;
-
+  padding-left: 1px;
+  padding-right: 1px;
 }
+
+
 
 .wrap-login100 {
   padding: 30px 15px 33px 15px;
