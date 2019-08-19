@@ -15,10 +15,10 @@ pip install -r requirements.txt
 
 ## Setup the database in MYSQL
 
-Under **config.py** file, 
+In **config.py** file, 
 - change *SQLALCHEMY_DATABASE_URI="mysql://username:password@server/db"* to link to your MYSQL
 - change the secret key **SECRET_KEY = "this is the key"**
-- Within **app.py** directory, run following command to create database
+- Under **application** directory, run following command to create database
 ```python
 from app import db
 db.create_all()
@@ -31,3 +31,4 @@ db.create_all()
 Python3 app.py
 ```
 
+![alt text](https://github.com/fankaisong/flask-app/blob/master/images/Screen%20Shot%202019-08-19%20at%202.53.58%20PM.png)
