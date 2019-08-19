@@ -13,17 +13,13 @@ The app uses Python3 and all packages can be installed using
 pip install -r requirements.txt
 ```
 
-## To setup the database in MYSQL
+## Setup the database in MYSQL
 
 Under **config.py** file, 
 - change *SQLALCHEMY_DATABASE_URI="mysql://username:password@server/db"* to link to your MYSQL
 - change the secret key **SECRET_KEY = "this is the key"**
-
-
+- run following command to create database
 ```python
-import foobar
-
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
+from app import db
+db.create_all()
 ```
