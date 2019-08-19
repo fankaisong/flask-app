@@ -1,0 +1,487 @@
+
+
+
+
+/*//////////////////////////////////////////////////////////////////
+[ FONT ]*/
+
+@font-face {
+  font-family: Poppins-Regular;
+  src: url('./fonts/poppins/Poppins-Regular.ttf'); 
+}
+
+@font-face {
+  font-family: Poppins-Bold;
+  src: url('./fonts/poppins/Poppins-Bold.ttf'); 
+}
+
+@font-face {
+  font-family: Poppins-Medium;
+  src: url('./fonts/poppins/Poppins-Medium.ttf'); 
+}
+
+@font-face {
+  font-family: Montserrat-Bold;
+  src: url('./fonts/montserrat/Montserrat-Bold.ttf'); 
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ RESTYLE TAG ]*/
+
+* {
+	margin: 0px; 
+	padding: 0px; 
+	box-sizing: border-box;
+}
+
+body, html {
+	height: 100%;
+	font-family: Poppins-Regular, sans-serif;
+}
+
+
+
+/*---------------------------------------------*/
+input {
+	outline: none;
+	border: none;
+}
+
+textarea {
+  outline: none;
+  border: none;
+}
+
+
+/*---------------------------------------------*/
+button {
+	outline: none !important;
+	border: none;
+	background: transparent;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+iframe {
+	border: none !important;
+}
+
+
+/*//////////////////////////////////////////////////////////////////
+[ Utility ]*/
+.txt1 {
+  font-family: Poppins-Regular;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #999999;
+}
+
+.txt2 {
+  font-family: Poppins-Regular;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #666666;
+}
+
+/*//////layout //////////////////////////////////////////layout CSS*/
+.layout-navbar{
+  width: 100%;
+  display: inline-block;
+  height: 55px;
+  background-color: #343a40;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.layout-welcome{
+  float: left;
+  justify-content: space-between;
+  width: 25%;
+  padding-right: 15px;
+  padding-left: 120px;
+  margin-right: 10px;
+  margin-left: 200px;
+  height:90%;
+}
+
+.layout-fonts{
+  color: white;
+  padding-top: .3125rem;
+  padding-left: 10%;
+  font-size: 2.25rem;
+  line-height: inherit;
+  white-space: nowrap;
+  font-family: Poppins-Bold;
+}
+
+.layout-menu{
+  float: right;
+  width: 50%;
+  padding-right: 20%;
+  padding-left: 15px;
+  margin-right: 15px;
+  margin-left: 15px;
+  height:90%;
+}
+
+.layout-menu-fonts{
+  float: right;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  padding-top: .9125rem;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: 15px;
+  margin-left: 15px;
+  font-family: Poppins-Regular;  
+}
+
+.table-display{
+  width:100%;
+  margin-right: 10px;
+  margin-left: 10px;
+
+}
+.wrap-table100 {
+  width: 60%;
+  display: inline-block;
+  background: #fff;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 60px 40px 30px 40px;
+}
+
+.edit-delete-btn{
+  font-family: Montserrat-Bold;
+  font-size: 1rem;
+  color: white;
+}
+
+
+
+/*//////////////////////////////////////////////////////////////////
+[ login ]*/
+
+
+.wrap-login100 {
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10% 10% 10% 10%;
+}
+
+
+/*/*home page css*--------------------------------*/
+.wrap-upload100 {
+  width: 40%;
+  background: #fff;
+  padding: 60px 40px 30px 40px;
+  margin-left: auto;
+  margin-right: auto
+}
+
+
+
+
+/*------------------------------------------------------------------
+[  ]*/
+.login100-form {
+  margin-left: auto;
+    margin-right: auto;
+}
+
+.login100-form-title {
+  font-family: Poppins-Bold;
+  font-size: 24px;
+  color: #333333;
+  line-height: 1.2;
+  text-align: center;
+
+  width: 100%;
+  display: block;
+  padding-bottom: 54px;
+}
+
+
+/*---------------------------------------------*/
+.wrap-input100 {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  margin-bottom: 10px;
+}
+
+.input100 {
+  font-family: Poppins-Medium;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #666666;
+
+  display: block;
+  width: 100%;
+  background: #e6e6e6;
+  height: 50px;
+  border-radius: 25px;
+  padding: 0 30px 0 68px;
+}
+
+
+/*------------------------------------------------------------------
+[ Focus ]*/
+.focus-input100 {
+  display: block;
+  position: absolute;
+  border-radius: 25px;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 0px 0px 0px;
+  color: rgba(87,184,70, 0.8);
+}
+
+
+
+.symbol-input100 {
+  font-size: 15px;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  border-radius: 25px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-left: 35px;
+  pointer-events: none;
+  color: #666666;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.input100:focus + .focus-input100 + .symbol-input100 {
+  color: #57b846;
+  padding-left: 28px;
+}
+
+/*------------------------------------------------------------------
+[ Button ]*/
+.container-login100-form-btn {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.login100-form-btn {
+  font-family: Montserrat-Bold;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #fff;
+  text-transform: uppercase;
+
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  background: #57b846;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25px;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.login100-form-btn:hover {
+  background: #333333;
+}
+
+
+
+/*------------------------------------------------------------------
+[ Responsive ]*/
+
+
+
+@media (max-width: 992px) {
+  .wrap-login100 {
+    padding: 177px 90px 33px 85px;
+  }
+
+  .login100-pic {
+    width: 35%;
+  }
+
+  .login100-form {
+    width: 50%;
+  }
+  .display-result {
+    padding: 30px 90px 33px 85px;
+    width: 50%
+  }
+}
+
+@media (max-width: 992px) {
+  .alert-validate::before {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrap-login100 {
+    padding: 100px 80px 33px 80px;
+  }
+
+  .login100-pic {
+    display: none;
+  }
+
+  .login100-form {
+    width: 100%;
+  }
+  .display-result {
+    padding: 30px 90px 33px 85px;
+    width: 50%
+  }
+}
+
+@media (max-width: 576px) {
+
+
+
+.wrap-upload100 {
+  width: 100%;
+  display: inline-block;
+  background: #fff;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 40px 4px 10px 4px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+
+.layout-navbar{
+  height: 65px;
+  display: inline-block;
+  background-color: #343a40;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 0px
+}
+
+
+.layout-welcome{
+  float: left;
+  justify-content: space-between;
+  width: 35%;
+  padding: 25px 3px 10px 3px;
+  margin-right: 10px;
+  margin-left: 10px;
+  height:90%;
+}
+
+.layout-fonts{
+  color: white;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0px;
+}
+
+.layout-menu{
+  width: 53%;
+  float: right;
+  padding: 28px 3px 8px 0px;
+  margin-right: 20px;
+  margin-left: 0px;
+  height:90%;
+}
+
+.layout-menu-fonts{
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.7rem;
+  padding: 3px 2px 3px 2px;
+  margin-right: 3px;
+  margin-left: 3px;
+  font-family: Poppins-Regular;  
+}
+
+.table-fonts{
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.4rem;
+  padding: 3px 2px 3px 2px;
+  margin-right: 3px;
+  margin-left: 3px;
+  font-family: Poppins-Regular;  
+}
+
+.edit-delete-btn{
+  font-family: Montserrat-Bold;
+  font-size: 0.8rem;
+  color: white;
+}
+  .wrap-table100 {
+  width: 100%;
+  background: #fff;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 6px 4px 3px 4px;
+}
+
+.table-display{
+  width:50%;
+  font-size: 0.8rem;
+  margin-right: 0px;
+  margin-left: 0px;
+  padding-left: 1px;
+  padding-right: 1px;
+}
+
+
+
+.wrap-login100 {
+  padding: 30px 15px 33px 15px;
+}
+
+}
+
+
+

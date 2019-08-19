@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<!-- Page Content -->
+  <div class="col-lg-12 text-center">
+
+    <div class="wrap-upload100">
+
+      <form class="login100-form" method='post' action="/upload">
+        <span class="login100-form-title">Enter the product, price, & address</span>
+
+        <div class="wrap-input100">
+          {{ form.csrf_token }}
+          {{form.product(class='input100')}} 
+          {{form.price_type(style="list-style:none")}}
+        </div>
+
+
+        <div class="wrap-input100">
+          {{form.price(class='input100')}}
+        </div>
+
+        <div class="wrap-input100">
+          {{form.address(class='input100')}}
+        </div>
+
+        <div class="wrap-input100">
+          <input class="login100-form-btn" type="submit"  value="Upload">
+        </div>
+
+
+      </form>
+    </div>
+
+    <div class="wrap-upload100">
+      {% if info %}
+      <ul style="list-style-type: none">You have successfully uploaded:
+      <li>{{info[0]}}</li>
+      <li>{{info[1]}}</li>
+      <li>{{info[2]}}</li>
+    </ul>
+      {% endif %}  
+    </div>
+  </div>  
+
+
+{% endblock content %}
