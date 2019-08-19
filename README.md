@@ -31,6 +31,9 @@ db.create_all()
 Python3 app.py
 ```
 
+**Login page**
 <img src="images/img1.png" width=60% height=60%> 
-<img src="images/img2.png" width=60% height=60%> 
+**Create a user**
+<img src="images/img2.png" width=40% height=40%> 
+**Upload or search** 
 <img src="images/img3.png" width=60% height=60%> 
