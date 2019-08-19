@@ -15,8 +15,9 @@ pip install -r requirements.txt
 
 ## To setup the database in MYSQL
 
-Under **config.py** file, change *SQLALCHEMY_DATABASE_URI="mysql://username:password@server/db"* to link to your MYSQL
-Change the secret key **SECRET_KEY = "this is the key"**
+Under **config.py** file, 
+-change *SQLALCHEMY_DATABASE_URI="mysql://username:password@server/db"* to link to your MYSQL
+-Change the secret key **SECRET_KEY = "this is the key"**
 
 
 ```python
