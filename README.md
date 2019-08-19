@@ -32,15 +32,15 @@ Python3 app.py
 ```
 **Go to http://0.0.0.0:5000/**
 
-**Login Page:**
+**Login Page:**<br/>
 ![Pages](images/img1.png)
 
 
 
 
-**Create a user**
+**Create a user**<br/>
 ![Pages](images/img2.png)
 
 
-**Upload or search** 
+**Upload or search**<br/>
 ![Pages](images/img3.png)
