@@ -32,7 +32,7 @@ Python3 app.py
 ```
 
 Login Page: 
-![Pages](images/img1.png =100x)
+![Pages](images/img1.png){:height=100 width=100}
 
 
 
