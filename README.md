@@ -15,8 +15,7 @@ pip install -r requirements.txt
 
 ## To setup the database in MYSQL
 
-Change SQLALCHEMY_DATABASE_URI = "mysql://root:6121318@localhost/flaskapp" under config.py
-
+Under **config.py** Change *SQLALCHEMY_DATABASE_URI = "mysql://username:password@server/db"*
 
 ```python
 import foobar
