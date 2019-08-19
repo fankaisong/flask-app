@@ -43,4 +43,4 @@ Python3 app.py
 
 
 **Upload or search**<br/>
-![Pages](images/img3.png)
+<img src="images/img3.png" width = 100>
