@@ -7,13 +7,16 @@ This app demonstrates simple CRUD operations and the purpose of this website is 
 
 ## Installation
 
-The 
+The app uses Python3 and all packages can be installed using
 
 ```bash
-pip install foobar
+pip install -r requirements.txt
 ```
 
-## Usage
+## To setup the database in MYSQL
+
+Change SQLALCHEMY_DATABASE_URI = "mysql://root:6121318@localhost/flaskapp" under config.py
+
 
 ```python
 import foobar
