@@ -31,4 +31,15 @@ db.create_all()
 Python3 app.py
 ```
 
-![alt text](https://github.com/fankaisong/flask-app/blob/master/images/Screen%20Shot%202019-08-19%20at%202.53.58%20PM.png){:height="50%" width="50%"}
+Login Page: 
+![Pages](images/img1.png =100x)
+
+
+
+
+**Create a user**
+![Pages](images/img2.png)
+
+
+**Upload or search** 
+![Pages](images/img3.png)
