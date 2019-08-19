@@ -32,14 +32,14 @@ Python3 app.py
 ```
 
 Login Page: 
-![alt text]("images/img1.png")
+![alt text](images/img1.png =100x)
 
 
 
 
 **Create a user**
-![alt text]("images/img2.png")
+![alt text](images/img2.png)
 
 
 **Upload or search** 
-![alt text]("images/img3.png")
+![alt text](images/img3.png)
