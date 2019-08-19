@@ -30,6 +30,7 @@ db.create_all()
 ``` bash
 Python3 app.py
 ```
+**Go to http://0.0.0.0:5000/**
 
 **Login Page:**
 ![Pages](images/img1.png)
