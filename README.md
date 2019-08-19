@@ -31,8 +31,8 @@ db.create_all()
 Python3 app.py
 ```
 
-Login Page: 
-![Pages](images/img1.png){:height=100 width=100}
+**Login Page:**
+![Pages](images/img1.png)
 
 
 
