@@ -2,6 +2,9 @@ from app import *
 from models import Users, Ppa
 from flask import session, render_template, request, redirect
 from forms import LoginForm, UploadForm, SearchForm, RegisterForm
+from werkzeug.security import generate_password_hash, check_password_hash
+
+
 
 
 @app.route('/')
@@ -18,7 +21,7 @@ def login():
 
 	if form.validate_on_submit():
 		user = Users.query.filter_by(user_name=form.username.data).first()
-		if user and user.password==form.password.data:	
+		if user and check_password_hash(user.password, form.password.data):	
 			session['logged_in'] = True
 			session['username'] = form.username.data
 			return render_template('home.html')
@@ -37,8 +40,8 @@ def register():
 	if form.validate_on_submit():
 		status = Users.query.filter_by(user_name=form.username.data).first()
 		if not status:
-			print('done')
-			new_user = Users(user_name=form.username.data, password=form.password.data) 
+			hashed_password = generate_password_hash(form.password.data,"sha256")
+			new_user = Users(user_name=form.username.data, password=hashed_password) 
 			db.session.add(new_user)
 			db.session.commit()
 			session['logged_in'] = True
