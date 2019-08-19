@@ -31,4 +31,6 @@ db.create_all()
 Python3 app.py
 ```
 
-<img src="images/img1.png" width=50% height=50%>
+<img src="images/img1.png" width=60% height=60%> 
+<img src="images/img2.png" width=60% height=60%> 
+<img src="images/img3.png" width=60% height=60%> 
