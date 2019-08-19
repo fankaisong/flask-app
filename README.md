@@ -31,4 +31,5 @@ db.create_all()
 Python3 app.py
 ```
 
-![alt text](images/img1.png){:height="50%" width="50%"}
+![test image size](images/img1.png){:height="50%" width="50%"}
+<img src="images/img1.png" width="400" height="790">
