@@ -31,4 +31,4 @@ db.create_all()
 Python3 app.py
 ```
 
-![alt text](https://github.com/fankaisong/flask-app/blob/master/images/Screen%20Shot%202019-08-19%20at%202.53.58%20PM.png){:height="50%" width="50%"}
+![alt text](images/img1.png){:height="50%" width="50%"}
